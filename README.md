@@ -55,15 +55,19 @@ Each task contains:
 
 ### LeetCode
 
+<!-- PROGRESS:LEETCODE:START -->
 | # | Title | Difficulty | Topic | Status |
 |---|-------|------------|-------|--------|
 | - | - | - | - | - |
+<!-- PROGRESS:LEETCODE:END -->
 
 ### CodeWars
 
+<!-- PROGRESS:CODEWARS:START -->
 | Kyu | Title | Topic | Status |
 |-----|-------|-------|--------|
-| - | - | - | - | - |
+| - | - | - | - |
+<!-- PROGRESS:CODEWARS:END -->
 
 ## 🛠 Tech Stack
 
