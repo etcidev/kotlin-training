@@ -13,6 +13,16 @@ dependencies {
     testImplementation(kotlin("test"))
 }
 
+sourceSets {
+    main {
+        kotlin.srcDirs("src/main/kotlin", "tasks")
+    }
+    test {
+        kotlin.srcDirs("src/test/kotlin")
+    }
+}
+
+
 kotlin {
     jvmToolchain(17)
 }
