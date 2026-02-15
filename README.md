@@ -1,5 +1,7 @@
 # Kotlin Training
 
+[![Kotlin CI](https://github.com/etcidev/kotlin-training/actions/workflows/ci.yml/badge.svg)](https://github.com/etcidev/kotlin-training/actions/workflows/ci.yml)
+
 ![Kotlin](https://img.shields.io/badge/Kotlin-JVM-blue)
 ![Gradle](https://img.shields.io/badge/Build-Gradle-02303A?logo=gradle)
 ![Status](https://img.shields.io/badge/Practice-Active-brightgreen)
