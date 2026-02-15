@@ -2,8 +2,8 @@
 
 [![Kotlin CI](https://github.com/etcidev/kotlin-training/actions/workflows/ci.yml/badge.svg)](https://github.com/etcidev/kotlin-training/actions/workflows/ci.yml)
 
-![Kotlin](https://img.shields.io/badge/Kotlin-JVM-blue)
-![Gradle](https://img.shields.io/badge/Build-Gradle-02303A?logo=gradle)
+![Kotlin](https://img.shields.io/badge/Kotlin-JVM-blueviolet?logo=kotlin)
+![Gradle](https://img.shields.io/badge/Gradle-9.0.0-02303A?logo=gradle&logoColor=white)
 ![Status](https://img.shields.io/badge/Practice-Active-brightgreen)
 
 Training tasks in Kotlin (CodeWars + LeetCode).
