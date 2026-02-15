@@ -66,7 +66,7 @@ Each task contains:
 <!-- PROGRESS:CODEWARS:START -->
 | Kyu | Title | Topic | Status |
 |-----|-------|-------|--------|
-| - | - | - | - |
+| 7kyu | Row Sum of Odd Numbers (CodeWars 7kyu) | - | ✅ |
 <!-- PROGRESS:CODEWARS:END -->
 
 ## 🛠 Tech Stack
