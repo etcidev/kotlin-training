@@ -103,14 +103,14 @@ Each task contains:
 
 | Kyu | Title | Topic | Status |
 | --- | --- | --- | --- |
-| 7kyu | Row Sum of Odd Numbers (CodeWars 7kyu) | - | ✅ |
+| kyu7 | Row Sum of Odd Numbers (CodeWars 7kyu) | - | ✅ |
 
 <details>
 <summary><b>Full CodeWars list</b></summary>
 
 | Kyu | Title | Topic | Status |
 | --- | --- | --- | --- |
-| 7kyu | Row Sum of Odd Numbers (CodeWars 7kyu) | - | ✅ |
+| kyu7 | Row Sum of Odd Numbers (CodeWars 7kyu) | - | ✅ |
 
 </details>
 <!-- PROGRESS:CODEWARS:END -->
