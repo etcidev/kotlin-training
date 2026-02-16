@@ -41,7 +41,7 @@ def build_codewars_rows() -> list[str]:
         if not kyu_dir.is_dir():
             continue
 
-        kyu = kyu_dir.name  # 8kyu, 7kyu, 6kyu...
+        kyu = kyu_dir.name  # kyu8, kyu7, ...
 
         for task_dir in sorted(kyu_dir.iterdir()):
             if not task_dir.is_dir():
@@ -49,9 +49,8 @@ def build_codewars_rows() -> list[str]:
 
             slug = task_dir.name
             title = read_first_heading(task_dir / "Task.md") or slug_to_title(slug)
-            topic = "-"
             status = "✅"
-            rows.append(f"| {kyu} | {title} | {topic} | {status} |")
+            rows.append(f"| {kyu} | {title} | {status} |")
 
     return rows
 
@@ -141,10 +140,12 @@ def main() -> None:
     cw_recent = cw_rows[:5]
     lc_recent = lc_rows[:5]
 
-    cw_recent_table = build_table(["Kyu", "Title", "Topic", "Status"], cw_recent)
-    lc_recent_table = build_table(["#", "Title", "Difficulty", "Topic", "Status"], lc_recent)
+    # CodeWars: без Topic
+    cw_recent_table = build_table(["Kyu", "Title", "Status"], cw_recent)
+    cw_full_table = build_table(["Kyu", "Title", "Status"], cw_rows)
 
-    cw_full_table = build_table(["Kyu", "Title", "Topic", "Status"], cw_rows)
+    # LeetCode: как было (с Topic)
+    lc_recent_table = build_table(["#", "Title", "Difficulty", "Topic", "Status"], lc_recent)
     lc_full_table = build_table(["#", "Title", "Difficulty", "Topic", "Status"], lc_rows)
 
     cw_block = "\n\n".join([

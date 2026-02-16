@@ -101,18 +101,18 @@ Each task contains:
 <!-- PROGRESS:CODEWARS:START -->
 ### 📌 Recent (last 5)
 
-| Kyu | Title | Topic | Status |
-| --- | --- | --- | --- |
-| kyu7 | Row Sum of Odd Numbers (CodeWars 7kyu) | - | ✅ |
-| kyu8 | Reversed Sequence (8kyu) | - | ✅ |
+| Kyu | Title | Status |
+| --- | --- | --- |
+| kyu7 | Row Sum of Odd Numbers (CodeWars 7kyu) | ✅ |
+| kyu8 | Reversed Sequence (8kyu) | ✅ |
 
 <details>
 <summary><b>Full CodeWars list</b></summary>
 
-| Kyu | Title | Topic | Status |
-| --- | --- | --- | --- |
-| kyu7 | Row Sum of Odd Numbers (CodeWars 7kyu) | - | ✅ |
-| kyu8 | Reversed Sequence (8kyu) | - | ✅ |
+| Kyu | Title | Status |
+| --- | --- | --- |
+| kyu7 | Row Sum of Odd Numbers (CodeWars 7kyu) | ✅ |
+| kyu8 | Reversed Sequence (8kyu) | ✅ |
 
 </details>
 <!-- PROGRESS:CODEWARS:END -->
