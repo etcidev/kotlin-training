@@ -144,7 +144,7 @@ def main() -> None:
     cw_recent_table = build_table(["Kyu", "Title", "Status"], cw_recent)
     cw_full_table = build_table(["Kyu", "Title", "Status"], cw_rows)
 
-    # LeetCode: как было (с Topic)
+    # LeetCode: с Topic
     lc_recent_table = build_table(["#", "Title", "Difficulty", "Topic", "Status"], lc_recent)
     lc_full_table = build_table(["#", "Title", "Difficulty", "Topic", "Status"], lc_rows)
 
