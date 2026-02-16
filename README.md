@@ -34,15 +34,27 @@ This repository is part of my continuous practice as an Android/Kotlin developer
 ```
 kotlin-training/
 ├── tasks/
-│ ├── codewars/
-│ │ ├── 8kyu/
-│ │ └── ...
-│ ├── leetcode/
-│ │ ├── easy/
-│ │ ├── medium/
-│ │ └── hard/
+│   ├── codewars/
+│   │   ├── kyu8/
+│   │   ├── kyu7/
+│   │   └── ...
+│   └── leetcode/
+│       ├── easy/
+│       ├── medium/
+│       └── hard/
 ├── src/
-└── build.gradle.kts
+│   ├── main/
+│   │   └── kotlin/
+│   │       └── tasks/
+│   │           ├── codewars/
+│   │           └── leetcode/
+│   └── test/
+│       └── kotlin/
+│           └── tasks/
+│               ├── codewars/
+│               └── leetcode/
+├── build.gradle.kts
+└── README.md
 ```
 
 
