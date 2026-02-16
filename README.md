@@ -56,11 +56,11 @@ Each task contains:
 ### 📊 Progress Overview
 
 <!-- COUNTERS:START -->
-**Total solved:** -
+**Total solved:** 1
 
-**LeetCode solved:** -
+**LeetCode solved:** 0
 
-**CodeWars solved:** -
+**CodeWars solved:** 1
 <!-- COUNTERS:END -->
 
 ---
