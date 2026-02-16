@@ -94,30 +94,69 @@ def replace_block(text: str, start: str, end: str, new_block: str) -> str:
 
 
 def main() -> None:
+def build_table(headers: list[str], rows: list[str]) -> str:
+    header_line = "| " + " | ".join(headers) + " |"
+    separator = "| " + " | ".join(["---"] * len(headers)) + " |"
+    if not rows:
+        rows = ["| " + " | ".join(["-"] * len(headers)) + " |"]
+    return "\n".join([header_line, separator, *rows])
+
+
+def wrap_with_details(title: str, table: str) -> str:
+    return f"""
+<details>
+<summary><b>{title}</b></summary>
+
+{table}
+
+</details>
+""".strip()
+
+
+def main() -> None:
     md = README.read_text(encoding="utf-8")
 
-    # CodeWars table
     cw_rows = build_codewars_rows()
-    if not cw_rows:
-        cw_rows = ["| - | - | - | - |"]
-    cw_table = "\n".join([
-        "| Kyu | Title | Topic | Status |",
-        "|-----|-------|-------|--------|",
-        *cw_rows
-    ])
-
-    # LeetCode table
     lc_rows = build_leetcode_rows()
-    if not lc_rows:
-        lc_rows = ["| - | - | - | - | - |"]
-    lc_table = "\n".join([
-        "| # | Title | Difficulty | Topic | Status |",
-        "|---|-------|------------|-------|--------|",
-        *lc_rows
+
+    # Последние 5
+    cw_recent = cw_rows[:5]
+    lc_recent = lc_rows[:5]
+
+    cw_recent_table = build_table(
+        ["Kyu", "Title", "Topic", "Status"],
+        cw_recent
+    )
+
+    lc_recent_table = build_table(
+        ["#", "Title", "Difficulty", "Topic", "Status"],
+        lc_recent
+    )
+
+    cw_full_table = build_table(
+        ["Kyu", "Title", "Topic", "Status"],
+        cw_rows
+    )
+
+    lc_full_table = build_table(
+        ["#", "Title", "Difficulty", "Topic", "Status"],
+        lc_rows
+    )
+
+    cw_block = "\n\n".join([
+        "### 📌 Recent (last 5)",
+        cw_recent_table,
+        wrap_with_details("Full CodeWars list", cw_full_table)
     ])
 
-    md = replace_block(md, LC_START, LC_END, lc_table)
-    md = replace_block(md, CW_START, CW_END, cw_table)
+    lc_block = "\n\n".join([
+        "### 📌 Recent (last 5)",
+        lc_recent_table,
+        wrap_with_details("Full LeetCode list", lc_full_table)
+    ])
+
+    md = replace_block(md, LC_START, LC_END, lc_block)
+    md = replace_block(md, CW_START, CW_END, cw_block)
 
     README.write_text(md, encoding="utf-8")
     print("README.md updated")
