@@ -12,6 +12,9 @@ LC_END = "<!-- PROGRESS:LEETCODE:END -->"
 CW_START = "<!-- PROGRESS:CODEWARS:START -->"
 CW_END = "<!-- PROGRESS:CODEWARS:END -->"
 
+COUNTERS_START = "<!-- COUNTERS:START -->"
+COUNTERS_END = "<!-- COUNTERS:END -->"
+
 
 def slug_to_title(slug: str) -> str:
     # "row-sum-of-odd-numbers" -> "Row Sum Of Odd Numbers"
@@ -112,13 +115,29 @@ def wrap_with_details(title: str, table: str) -> str:
 </details>"""
 
 
+def build_counters_block(leetcode_count: int, codewars_count: int) -> str:
+    total = leetcode_count + codewars_count
+    return (
+        f"**Total solved:** {total}\n\n"
+        f"**LeetCode solved:** {leetcode_count}\n\n"
+        f"**CodeWars solved:** {codewars_count}"
+    )
+
+
 def main() -> None:
     md = README.read_text(encoding="utf-8")
 
     cw_rows = build_codewars_rows()
     lc_rows = build_leetcode_rows()
 
-    # Последние 5
+    # ✅ counters
+    counters_block = build_counters_block(
+        leetcode_count=len(lc_rows),
+        codewars_count=len(cw_rows),
+    )
+    md = replace_block(md, COUNTERS_START, COUNTERS_END, counters_block)
+
+    # ✅ recent + full tables
     cw_recent = cw_rows[:5]
     lc_recent = lc_rows[:5]
 
@@ -131,13 +150,13 @@ def main() -> None:
     cw_block = "\n\n".join([
         "### 📌 Recent (last 5)",
         cw_recent_table,
-        wrap_with_details("Full CodeWars list", cw_full_table)
+        wrap_with_details("Full CodeWars list", cw_full_table),
     ])
 
     lc_block = "\n\n".join([
         "### 📌 Recent (last 5)",
         lc_recent_table,
-        wrap_with_details("Full LeetCode list", lc_full_table)
+        wrap_with_details("Full LeetCode list", lc_full_table),
     ])
 
     md = replace_block(md, LC_START, LC_END, lc_block)

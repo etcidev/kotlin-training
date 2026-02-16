@@ -53,6 +53,15 @@ Each task contains:
 
 ## 📊 Progress
 
+<!-- COUNTERS:START -->
+**Total solved:** -
+
+**LeetCode solved:** -
+
+**CodeWars solved:** -
+<!-- COUNTERS:END -->
+
+
 ### LeetCode
 
 <!-- PROGRESS:LEETCODE:START -->
