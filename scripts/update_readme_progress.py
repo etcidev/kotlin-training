@@ -29,7 +29,7 @@ def read_first_heading(task_md: Path) -> str | None:
 
 
 def build_codewars_rows() -> list[str]:
-    rows = []
+    rows: list[str] = []
     base = TASKS / "codewars"
     if not base.exists():
         return rows
@@ -37,15 +37,16 @@ def build_codewars_rows() -> list[str]:
     for kyu_dir in sorted(base.iterdir()):
         if not kyu_dir.is_dir():
             continue
-        # expects: 8kyu, 7kyu, 6kyu...
-        kyu = kyu_dir.name
+
+        kyu = kyu_dir.name  # 8kyu, 7kyu, 6kyu...
 
         for task_dir in sorted(kyu_dir.iterdir()):
             if not task_dir.is_dir():
                 continue
+
             slug = task_dir.name
             title = read_first_heading(task_dir / "Task.md") or slug_to_title(slug)
-            topic = "-"  # можно потом улучшить (например, читать из Task.md)
+            topic = "-"
             status = "✅"
             rows.append(f"| {kyu} | {title} | {topic} | {status} |")
 
@@ -53,7 +54,7 @@ def build_codewars_rows() -> list[str]:
 
 
 def build_leetcode_rows() -> list[str]:
-    rows = []
+    rows: list[str] = []
     base = TASKS / "leetcode"
     if not base.exists():
         return rows
@@ -61,6 +62,7 @@ def build_leetcode_rows() -> list[str]:
     for diff_dir in sorted(base.iterdir()):
         if not diff_dir.is_dir():
             continue
+
         difficulty = diff_dir.name  # easy/medium/hard
 
         for task_dir in sorted(diff_dir.iterdir()):
@@ -93,7 +95,6 @@ def replace_block(text: str, start: str, end: str, new_block: str) -> str:
     return pattern.sub(replacement, text, count=1)
 
 
-def main() -> None:
 def build_table(headers: list[str], rows: list[str]) -> str:
     header_line = "| " + " | ".join(headers) + " |"
     separator = "| " + " | ".join(["---"] * len(headers)) + " |"
@@ -103,14 +104,12 @@ def build_table(headers: list[str], rows: list[str]) -> str:
 
 
 def wrap_with_details(title: str, table: str) -> str:
-    return f"""
-<details>
+    return f"""<details>
 <summary><b>{title}</b></summary>
 
 {table}
 
-</details>
-""".strip()
+</details>"""
 
 
 def main() -> None:
@@ -123,25 +122,11 @@ def main() -> None:
     cw_recent = cw_rows[:5]
     lc_recent = lc_rows[:5]
 
-    cw_recent_table = build_table(
-        ["Kyu", "Title", "Topic", "Status"],
-        cw_recent
-    )
+    cw_recent_table = build_table(["Kyu", "Title", "Topic", "Status"], cw_recent)
+    lc_recent_table = build_table(["#", "Title", "Difficulty", "Topic", "Status"], lc_recent)
 
-    lc_recent_table = build_table(
-        ["#", "Title", "Difficulty", "Topic", "Status"],
-        lc_recent
-    )
-
-    cw_full_table = build_table(
-        ["Kyu", "Title", "Topic", "Status"],
-        cw_rows
-    )
-
-    lc_full_table = build_table(
-        ["#", "Title", "Difficulty", "Topic", "Status"],
-        lc_rows
-    )
+    cw_full_table = build_table(["Kyu", "Title", "Topic", "Status"], cw_rows)
+    lc_full_table = build_table(["#", "Title", "Difficulty", "Topic", "Status"], lc_rows)
 
     cw_block = "\n\n".join([
         "### 📌 Recent (last 5)",
