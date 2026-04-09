@@ -68,11 +68,11 @@ Each task contains:
 ### 📊 Progress Overview
 
 <!-- COUNTERS:START -->
-**Total solved:** 3
+**Total solved:** 4
 
 **LeetCode solved:** 0
 
-**CodeWars solved:** 3
+**CodeWars solved:** 4
 <!-- COUNTERS:END -->
 
 ---
@@ -106,6 +106,7 @@ Each task contains:
 | kyu7 | Row Sum of Odd Numbers (CodeWars 7kyu) | ✅ |
 | kyu8 | Invert Values (CodeWars 8kyu) | ✅ |
 | kyu8 | Reversed Sequence (8kyu) | ✅ |
+| kyu8 | Smallest Integer (CodeWars 8kyu) | ✅ |
 
 <details>
 <summary><b>Full CodeWars list</b></summary>
@@ -115,6 +116,7 @@ Each task contains:
 | kyu7 | Row Sum of Odd Numbers (CodeWars 7kyu) | ✅ |
 | kyu8 | Invert Values (CodeWars 8kyu) | ✅ |
 | kyu8 | Reversed Sequence (8kyu) | ✅ |
+| kyu8 | Smallest Integer (CodeWars 8kyu) | ✅ |
 
 </details>
 <!-- PROGRESS:CODEWARS:END -->
