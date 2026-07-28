@@ -68,9 +68,9 @@ Each task contains:
 ### 📊 Progress Overview
 
 <!-- COUNTERS:START -->
-**Total solved:** 4
+**Total solved:** 5
 
-**LeetCode solved:** 0
+**LeetCode solved:** 1
 
 **CodeWars solved:** 4
 <!-- COUNTERS:END -->
@@ -84,14 +84,14 @@ Each task contains:
 
 | # | Title | Difficulty | Topic | Status |
 | --- | --- | --- | --- | --- |
-| - | - | - | - | - |
+| 0021 | 21. Merge Two Sorted Lists | easy | - | ✅ |
 
 <details>
 <summary><b>Full LeetCode list</b></summary>
 
 | # | Title | Difficulty | Topic | Status |
 | --- | --- | --- | --- | --- |
-| - | - | - | - | - |
+| 0021 | 21. Merge Two Sorted Lists | easy | - | ✅ |
 
 </details>
 <!-- PROGRESS:LEETCODE:END -->
