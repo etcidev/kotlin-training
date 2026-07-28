@@ -68,9 +68,9 @@ Each task contains:
 ### 📊 Progress Overview
 
 <!-- COUNTERS:START -->
-**Total solved:** 5
+**Total solved:** 6
 
-**LeetCode solved:** 1
+**LeetCode solved:** 2
 
 **CodeWars solved:** 4
 <!-- COUNTERS:END -->
@@ -85,6 +85,7 @@ Each task contains:
 | # | Title | Difficulty | Topic | Status |
 | --- | --- | --- | --- | --- |
 | 0021 | Merge Two Sorted Lists (LeetCode Easy) | easy | - | ✅ |
+| 0026 | Remove Duplicates from Sorted Array (LeetCode Easy) | easy | - | ✅ |
 
 <details>
 <summary><b>Full LeetCode list</b></summary>
@@ -92,6 +93,7 @@ Each task contains:
 | # | Title | Difficulty | Topic | Status |
 | --- | --- | --- | --- | --- |
 | 0021 | Merge Two Sorted Lists (LeetCode Easy) | easy | - | ✅ |
+| 0026 | Remove Duplicates from Sorted Array (LeetCode Easy) | easy | - | ✅ |
 
 </details>
 <!-- PROGRESS:LEETCODE:END -->
