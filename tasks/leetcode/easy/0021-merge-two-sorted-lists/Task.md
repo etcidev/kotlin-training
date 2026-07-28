@@ -1,22 +1,13 @@
-# 21. Merge Two Sorted Lists
+# Merge Two Sorted Lists (LeetCode Easy)
 
-[LeetCode problem](https://leetcode.com/problems/merge-two-sorted-lists/)
+[View the problem on LeetCode](https://leetcode.com/problems/merge-two-sorted-lists/)
 
-**Difficulty:** Easy  
-**Topics:** Linked List, Recursion  
-**Language:** Kotlin
-
-## Description
+## 📝 Description
 
 You are given the heads of two linked lists sorted in non-decreasing order.
+
 Merge them into one sorted list by reconnecting the existing nodes and return
 the head of the merged list.
-
-## Условие на русском
-
-Даны головы двух односвязных списков, отсортированных по неубыванию.
-Объедините их в один отсортированный список, переиспользуя существующие узлы,
-и верните голову получившегося списка.
 
 ### Examples
 
@@ -37,28 +28,54 @@ Output: [0]
 - Each node value is between `-100` and `100`.
 - Both input lists are sorted in non-decreasing order.
 
-## Approach
+---
 
-Create a temporary dummy node and keep a pointer to the tail of the merged
-list. Compare the current nodes of both lists and append the node with the
-smaller value. When one list is exhausted, attach the remainder of the other
-list. The dummy node removes the need to handle the first result node as a
-special case.
+## 💡 Idea
 
-## Решение
+Keep a pointer to the current node in each input list.
 
-Создаём фиктивный начальный узел и храним указатель на конец результирующего
-списка. На каждом шаге сравниваем текущие узлы двух списков и присоединяем узел
-с меньшим значением. Когда один список заканчивается, присоединяем оставшуюся
-часть второго списка. Фиктивный узел позволяет не обрабатывать первый элемент
-отдельно.
+- compare the values of the two current nodes
+- connect the smaller node to the result
+- move forward in the list from which the node was taken
+- when one list ends, connect the remaining part of the other list
 
-## Complexity
+A dummy node is used at the beginning of the result so that the first real
+node does not require separate handling.
+
+---
+
+## 🛠️ Implementation Details
+
+The function signature required by LeetCode:
+
+```kotlin
+fun mergeTwoLists(
+    list1: ListNode?,
+    list2: ListNode?
+): ListNode?
+```
+
+The algorithm reconnects the existing nodes instead of creating a copy of
+every value.
+
+---
+
+## ⏱️ Complexity
 
 - Time: `O(n + m)`
-- Extra space: `O(1)`
+- Space: `O(1)`
 
-## Result
+---
+
+## 🧠 Notes
+
+- `ListNode?` means that a node can be `null`.
+- The dummy node is not included in the returned list.
+- `firstNode ?: secondNode` selects the list that still has nodes remaining.
+
+---
+
+## ✅ Result
 
 - Status: Accepted
 - Test cases: 208 / 208

@@ -84,14 +84,14 @@ Each task contains:
 
 | # | Title | Difficulty | Topic | Status |
 | --- | --- | --- | --- | --- |
-| 0021 | 21. Merge Two Sorted Lists | easy | - | ✅ |
+| 0021 | Merge Two Sorted Lists (LeetCode Easy) | easy | - | ✅ |
 
 <details>
 <summary><b>Full LeetCode list</b></summary>
 
 | # | Title | Difficulty | Topic | Status |
 | --- | --- | --- | --- | --- |
-| 0021 | 21. Merge Two Sorted Lists | easy | - | ✅ |
+| 0021 | Merge Two Sorted Lists (LeetCode Easy) | easy | - | ✅ |
 
 </details>
 <!-- PROGRESS:LEETCODE:END -->
