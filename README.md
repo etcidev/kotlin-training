@@ -68,9 +68,9 @@ Each task contains:
 ### 📊 Progress Overview
 
 <!-- COUNTERS:START -->
-**Total solved:** 6
+**Total solved:** 7
 
-**LeetCode solved:** 2
+**LeetCode solved:** 3
 
 **CodeWars solved:** 4
 <!-- COUNTERS:END -->
@@ -86,6 +86,7 @@ Each task contains:
 | --- | --- | --- | --- | --- |
 | 0021 | Merge Two Sorted Lists (LeetCode Easy) | easy | - | ✅ |
 | 0026 | Remove Duplicates from Sorted Array (LeetCode Easy) | easy | - | ✅ |
+| 1140 | Stone Game II (LeetCode Medium) | medium | - | ✅ |
 
 <details>
 <summary><b>Full LeetCode list</b></summary>
@@ -94,6 +95,7 @@ Each task contains:
 | --- | --- | --- | --- | --- |
 | 0021 | Merge Two Sorted Lists (LeetCode Easy) | easy | - | ✅ |
 | 0026 | Remove Duplicates from Sorted Array (LeetCode Easy) | easy | - | ✅ |
+| 1140 | Stone Game II (LeetCode Medium) | medium | - | ✅ |
 
 </details>
 <!-- PROGRESS:LEETCODE:END -->
